@@ -1,5 +1,7 @@
 # 华南理工大学硕/博士学位论文LaTeX模板
 
+上游项目 / Upstream: [mengchaoheng/SCUT_thesis](https://github.com/mengchaoheng/SCUT_thesis).
+
 本模板可用于撰写华南理工大学硕/博士学位论文。模板由[alwintsui](https://github.com/alwintsui/scutthesis)以及[yecfly](https://github.com/yecfly/scut-thesis)的模板修改而来。
 
 本模板还衍生出了很多模板：
@@ -34,7 +36,7 @@ latex和office在写论文、写slides时只是不同的工具，就像是两把
 
 编译`scutthesis.tex`文件，生成论文pdf文件即`scutthesis.pdf`，共有四种方法，任选其一：
 
-1.使用VSCode, 详情参考[讨论区vscode配置](https://github.com/mengchaoheng/SCUT_thesis/discussions/6)，也可以参考[zhuohoudeputao](https://github.com/zhuohoudeputao)做的[环境配置视频](hihihttps://www.bilibili.com/video/BV1jT4y1e7QT)。基本思路为安装LaTeX Workshop插件，在`settings.json`中修改相关字段为`settings_files/settings.json`中的值。以前就有在使用vscode的同学需要把该`settings.json`文件的部分内容添加到自己的.json文件。第一次使用vscode的同学直接覆盖就行。在vscode配置使用xelatexmk进行编译，基本步骤为先点击（激活）要编译的某个.tex文件界面，此时最左侧会出现`TeX`工具栏，点击工具栏后，展开`Build LaTeX project`（`构建LaTeX项目`），点击里面的xelatexmk编译链（也可以尝试`xelatex -> biber -> xelatex*2`，其他编译链/配方则提供给有其他需求的同学使用，通常不需要关心），下方编译标志由转圈变成打勾后，然后`View LaTeX PDF`即可查看pdf文件。注意一定要先点击激活要编译的文件，再去点编译，否则识别不到。`settings.json`文件可以自定义配置，若不喜欢保存自动编译，可以改为手动，第一次编译过后会记住上次编译选项，此时只需要点击`构建LaTeX项目`即可（省略展开`Build LaTeX project`这一步骤）。（2022年起添加的方法，建议有编程基础、追求效率的同学使用）
+1.使用VSCode, 详情参考[讨论区vscode配置](https://github.com/mengchaoheng/SCUT_thesis/discussions/6)，也可以参考[zhuohoudeputao](https://github.com/zhuohoudeputao)做的[环境配置视频](https://www.bilibili.com/video/BV1jT4y1e7QT)。基本思路为安装LaTeX Workshop插件，在`settings.json`中修改相关字段为`settings_files/settings.json`中的值。以前就有在使用vscode的同学需要把该`settings.json`文件的部分内容添加到自己的.json文件。第一次使用vscode的同学直接覆盖就行。在vscode配置使用xelatexmk进行编译，基本步骤为先点击（激活）要编译的某个.tex文件界面，此时最左侧会出现`TeX`工具栏，点击工具栏后，展开`Build LaTeX project`（`构建LaTeX项目`），点击里面的xelatexmk编译链（也可以尝试`xelatex -> biber -> xelatex*2`，其他编译链/配方则提供给有其他需求的同学使用，通常不需要关心），下方编译标志由转圈变成打勾后，然后`View LaTeX PDF`即可查看pdf文件。注意一定要先点击激活要编译的文件，再去点编译，否则识别不到。`settings.json`文件可以自定义配置，若不喜欢保存自动编译，可以改为手动，第一次编译过后会记住上次编译选项，此时只需要点击`构建LaTeX项目`即可（省略展开`Build LaTeX project`这一步骤）。（2022年起添加的方法，建议有编程基础、追求效率的同学使用）
 
 2.使用TeXstudio，首次编译建议从主文件`scutthesis.tex`开始编译，首先在`TeXstudio的Options->Configure TeXstudio->build`中，编译器(Dufault Compiler)选择`XeLaTeX`，默认文献工具(Default Bibliography Tool)选`Biber`，构建并查看（build & view） 按照`scutthesis.pdf`中的图2-1进行设置（点击右侧扳手符号进行设置，分别选择`recompile-bibliography`、`Defualt compiler`、`Defualt Viewer`并点add到右侧栏中），也可以使用默认的Compile & View，只不过此时不会自动更新参考文献著录。(模板最初使用的编辑器，建议喜欢本地编辑、平时较少倒腾电脑、较少编程、追求稳定的同学使用)
 
